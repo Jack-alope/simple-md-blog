@@ -1,7 +1,3 @@
-MDCMD=python3 -m markdown
-# make sure -f is last
-MDOPTS=-f
-
 all: update indexraw.html
 
 update:
@@ -10,7 +6,10 @@ update:
 	python3 -m pip install markdown
 
 indexraw.html: README.md
-	$(MDCMD) -x md_in_html $(MDOPTS) $(@) $(<)
+	python3 -m markdown -x md_in_html -f $(@) $(<)
+	
+post:
+	python3 -m markdown -x md_in_html posts/sample.md >> pages/sample.html
 
 upload: index.html
 	ssh down.dsg.cs.tcd.ie "(cd /var/www/witidtm;git pull)"
