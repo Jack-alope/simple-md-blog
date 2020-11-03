@@ -1,7 +1,5 @@
-<div id="background" markdown=1 style="width: 100%;height: 100%">
-  
-![Background](https://jack.engineering/assets/img/SA_back.png)
-
+<div id="background">
+  <img src="drawing.jpg" alt="drawing" style="width:100%;height:100%"/>
 </div>
 
 <div id="body" markdown=1>
