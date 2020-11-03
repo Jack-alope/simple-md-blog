@@ -1,4 +1,4 @@
-all: update indexraw.html
+all: update indexraw.html post
 
 update:
 	sudo apt-get update
