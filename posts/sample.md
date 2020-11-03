@@ -1,4 +1,4 @@
-<div id="background">
+<div id="background" markdown=1>
   
 ![Background](https://jack.engineering/assets/img/SA_back.png)
 
