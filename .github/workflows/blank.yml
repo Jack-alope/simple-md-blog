@@ -1,0 +1,27 @@
+name: Render html
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Make
+      run: make
+    - name: Commit files
+      run: |
+        git config --local user.name "Github Action"
+        git add .
+        git commit -m "redered"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
+        force: true
