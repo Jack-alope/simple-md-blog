@@ -9,7 +9,7 @@ indexraw.html: README.md
 	python3 -m markdown -x md_in_html -f $(@) $(<)
 	
 post:
-	python3 -m markdown -x md_in_html posts/sample.md > pages/sample.html
+	python3 -m markdown posts/sample.md > pages/sample.html
 
 upload: index.html
 	ssh down.dsg.cs.tcd.ie "(cd /var/www/witidtm;git pull)"
