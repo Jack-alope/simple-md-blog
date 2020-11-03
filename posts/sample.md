@@ -1,4 +1,4 @@
-<div id="background">
+<div id="background" class="overlay">
   <img src="https://jack.engineering/assets/img/SA_back.png" alt="drawing" style="width:100%;height:100%"/>
 </div>
 
